@@ -1,21 +1,21 @@
-# file <- "002_plumber_second_start.R"
-
+# file <- "plumber_start.R"
 
 ## REF:     https://rviews.rstudio.com/2018/07/23/rest-apis-and-plumber/
 ##
-#* @apiTitle Simple API
 
-#* Echo provided text
-#* @param text The text to be echoed in the response
-#* @get /echo
-function(text = "") {
-  list(
-    message_echo = paste("The text is:", text)
-  )
-}
-
-
+# ================
+##  START SERVER
+# ================
+#
+library(plumber)
+plumber::plumb("002_plumber_second_start.R")$run(port = 5762)
     
+
+
+# =======================
+##  OR START at console
+# =======================
+#
 #at console:
 #   plumber::plumb("002_plumber_second_start.R")$run(port = 5762)
 #

@@ -1,6 +1,15 @@
-# file <- "002_plumber_second_start.R"
-
+#   file <- "simple_plumb.R#"
+#
 # =========================
+#       SIMPLEST PLUMB
+#       PURPOSE:  simple API, endpoints and simple filter (to log)
+#
+#       USAGE:    At console or separate file, pr(file="...") |> pr_run() 
+# =========================
+#
+#
+#
+#
     #       SET ENDPOINTS
 # =========================
 #
@@ -41,21 +50,3 @@ function(req){
   plumber::forward()
 }
 
-# ======================
-# START PLUMBER SERVER
-# ======================
-#
-#at console:
-#   plumber::plumb("002_plumber_second_start.R")$run(port = 5762)
-#
-#in browser:
-#   http://127.0.0.1:5762/echo?text=hi
-#
-# curl, use quotes
-#    curl localhost:5762/echo
-#    curl "localhost:5762/echo?text=hello"
-# 
-#   curl "localhost:5762/talk?text"
-
-# documentation this code
-# http://127.0.0.1:5762/__docs__/
