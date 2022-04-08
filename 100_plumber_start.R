@@ -4,11 +4,11 @@
 ##
 
 # ================
-##  START SERVER
+##  START SERVER  AND LOAD in API in file 
 # ================
 #
 library(plumber)
-plumber::plumb("002_plumber_second_start.R")$run(port = 5762)
+plumber::plumb("~/code/plumber/100_plumb.R")$run(port = 5762)
     
 
 
